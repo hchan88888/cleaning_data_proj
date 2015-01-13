@@ -1,0 +1,42 @@
+---
+title: "README"
+author: "SC"
+date: "Monday, January 12, 2015"
+output: html_document
+---
+
+This README describes the components of this project and how to run the program.
+
+The submitted files consist of an R file named run_analysis.R, a code book, an output file named tidydata.txt, and this document.
+
+To generate output:
+
+1.  From UCI HAR Dataset folder, extract features.txt and activity_labels.txt.
+2.  From subfolder train, extract subject_train.txt, X_train.txt and y_train.txt.
+3.  From subfolder test, extract subject_test.txt, X_test.txt and y_test.txt.
+4.  Set working directory by typing 
+```    
+setwd(your_directory_path).
+```
+5.  Put all the above data files in that directory.
+6.  Put run_analysis.R in the same directory.
+7.  At console, type 
+```
+source("run_analysis.R")
+```
+8.  To run, type
+```
+run_analysis()
+```
+
+To view output:
+
+1.  Make sure tidydata.txt is in the working directory
+2.  Type
+```
+data <- read.table("tidydata.txt", header = TRUE)
+```
+3. Type
+```
+View(data)
+```
